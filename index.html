@@ -1,101 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<script>document.documentElement.classList.add('js');</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Иван — Full-Stack разработчик</title>
-<meta name="description" content="Собираю быстрые и надёжные продукты на React, Node.js и TypeScript. 7+ лет опыта." />
-<meta name="theme-color" content="#112221" />
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Алексей Лугачев — Python Backend / DevOps / ML Engineer</title>
+  <meta name="description" content="Python-разработчик с фокусом на бэкенд, DevOps и ML. Участник проекта Sova — мультиагентной ИИ-платформы." />
+  <meta name="theme-color" content="#112221" />
+  <meta property="og:title" content="Алексей Лугачев — Python Backend / DevOps / ML" />
+  <meta property="og:description" content="Python · FastAPI · Docker · ML" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E" />
 
-<meta property="og:title" content="Иван — Full-Stack разработчик" />
-<meta property="og:description" content="React · Node.js · TypeScript" />
-<meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
 </head>
 <body>
 
-<!-- NAV -->
+<a href="#main" class="skip-link">Перейти к содержимому</a>
+
+<!-- ════════════════════════════════════════════════════════
+     NAV
+     ════════════════════════════════════════════════════════ -->
 <nav class="nav" aria-label="Основная навигация">
   <div class="container nav__inner">
-    <a href="#" class="nav__logo">ivan<span>.dev</span></a>
+    <a href="#" class="nav__logo" aria-label="На главную">
+      <span data-config="nick">alakei1</span><span>.dev</span>
+    </a>
     <ul class="nav__links">
       <li><a href="#about">Обо мне</a></li>
       <li><a href="#skills">Навыки</a></li>
       <li><a href="#projects">Проекты</a></li>
-      <li><a href="#services">Услуги</a></li>
+      <li><a href="#services">Сотрудничество</a></li>
       <li><a href="#contact">Контакты</a></li>
     </ul>
-    <a href="#contact" class="btn btn--accent">Обсудить проект</a>
+    <a href="#contact" class="btn btn--accent nav__btn">Обсудить проект</a>
   </div>
 </nav>
 
-<main>
+<main id="main">
 
-<!-- HERO -->
-<section class="section container hero">
+<!-- ════════════════════════════════════════════════════════
+     HERO — цифры тянутся из config.js (data-config-counter,
+     data-config-ring). Меняешь в config.js — обновляется тут.
+     ════════════════════════════════════════════════════════ -->
+<section class="section container hero" aria-labelledby="hero-title">
   <div class="bento bento--hero">
 
     <article class="card hero__funding reveal">
       <p class="card__kicker">Опыт в разработке</p>
-      <div class="progress-ring" style="--p:75" data-ring="75">
+      <div class="progress-ring" data-config-ring="experience.backendPercent" data-ring="60">
         <svg viewBox="0 0 120 120" aria-hidden="true">
           <circle class="progress-ring__bg" cx="60" cy="60" r="48"/>
           <circle class="progress-ring__fg" cx="60" cy="60" r="48"/>
         </svg>
         <div class="progress-ring__label">
-          <b data-counter="75" data-suffix="%">75%</b>
-          <span>задач в срок</span>
+          <b data-config-counter="experience.backendPercent" data-suffix="%">60%</b>
+          <span>бэкенд-задач</span>
         </div>
       </div>
-      <div class="hero__big-num" data-counter="7" data-suffix="+">7+</div>
-      <p class="card__sub">лет коммерческой разработки на React и Node.js</p>
+      <div class="hero__big-num" data-config-counter="experience.years" data-suffix="+">1+</div>
+      <p class="card__sub">год коммерческой разработки на Python</p>
     </article>
 
     <article class="card hero__views reveal">
-      <div class="hero__stat-num" data-counter="4875" data-format="thousand-dot">4.875</div>
-      <p class="card__sub">просмотров портфолио за год</p>
+      <div class="hero__stat-num" data-config-counter="experience.activeProjects" data-suffix="+">2+</div>
+      <p class="card__sub">активных проекта в разработке</p>
     </article>
 
     <article class="card hero__users reveal">
-      <p class="card__kicker">Новые клиенты</p>
-      <div class="hero__stat-num" data-counter="57" data-suffix="K">57K</div>
-      <div class="hero__stat-delta">+10%</div>
+      <p class="card__kicker">Специализация</p>
+      <div class="hero__stat-num hero__stat-num--text">Backend</div>
+      <div class="hero__stat-delta">+ DevOps + ML</div>
     </article>
 
     <article class="card hero__team reveal">
-      <p class="card__kicker">Команда и партнёры</p>
+      <p class="card__kicker">Партнёры</p>
 
       <div class="hero__photo">
-        <img
-          src="photo.png"
-          alt="Иван — Full-Stack разработчик"
-          width="96" height="96"
-          loading="lazy" decoding="async"
-          onerror="this.remove(); this.closest('.hero__photo').classList.add('hero__photo--fallback');"
-        />
+        <img src="assets/photo.png"
+             alt="Алексей Лугачев"
+             width="96" height="96"
+             loading="lazy" decoding="async" />
       </div>
 
-      <h3 class="hero__team-title">Дизайнеры и разработчики, с которыми работаю</h3>
+      <!-- Список партнёров рендерится из config.partners -->
+      <h3 class="hero__team-title" id="partnersList"></h3>
+
       <div class="avatars" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-        <span class="avatars__more">+2</span>
+        <span></span><span></span>
+        <span class="avatars__more">+1</span>
       </div>
       <div class="hero__team-bottom">
-        <p class="card__kicker">Заявок в месяц</p>
-        <div class="hero__stat-num" data-counter="54">54</div>
-        <div class="hero__stat-delta">+40%</div>
+        <p class="card__kicker">Совместные проекты</p>
+        <div class="hero__stat-num" data-config-counter="experience.jointProjects">1</div>
+        <div class="hero__stat-delta">+ в разработке</div>
       </div>
     </article>
 
     <article class="card hero__center reveal">
       <span class="badge"><span class="dot" aria-hidden="true"></span> Открыт к проектам</span>
-      <h1>Full-Stack разработчик <em>цифровых продуктов</em></h1>
-      <p class="lead">Собираю быстрые, надёжные веб-приложения на React, Node.js и TypeScript.</p>
+      <h1 id="hero-title">Python Backend, DevOps и <em>ML Engineer</em></h1>
+      <p class="lead">Создаю интеллектуальное ядро для продуктов: от API и баз данных до ML-пайплайнов и инфраструктуры.</p>
       <div class="hero__cta">
         <a href="#contact" class="btn btn--accent">Обсудить проект</a>
         <a href="#projects" class="btn btn--ghost">Смотреть кейсы →</a>
@@ -105,29 +116,29 @@
     <article class="card terminal reveal">
       <div class="terminal__bar" aria-hidden="true">
         <span></span><span></span><span></span>
-        <em>~/now.sh</em>
+        <span class="terminal__path" data-config="nick" data-config-prefix="~/">~/alakei1</span>
       </div>
       <pre class="terminal__body"><code><span class="t-cmd">$</span> whoami
-<span class="t-out">full-stack · GMT+3</span>
+<span class="t-out">python-backend · devops · ml</span>
 <span class="t-cmd">$</span> status
 <span class="t-ok">● available</span></code></pre>
     </article>
 
     <article class="card hero__mini reveal">
       <p class="card__kicker">Локация</p>
-      <div class="hero__big-num hero__big-num--sm">Мск</div>
+      <div class="hero__big-num hero__big-num--sm" data-config="location">РФ</div>
       <p class="card__sub">GMT+3 · удалённо</p>
     </article>
 
     <article class="card hero__stack reveal">
       <p class="card__kicker">Стек</p>
       <div class="tags tags--small">
-        <span class="tag">TS</span>
-        <span class="tag">React</span>
-        <span class="tag">Next</span>
-        <span class="tag">Node</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Go</span>
+        <span class="tag">Docker</span>
         <span class="tag">PG</span>
-        <span class="tag tag--terra">Docker</span>
+        <span class="tag tag--terra">ML</span>
       </div>
     </article>
 
@@ -140,7 +151,9 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ════════════════════════════════════════════════════════
+     ABOUT — текст и стек правишь прямо здесь
+     ════════════════════════════════════════════════════════ -->
 <section class="section container" id="about">
   <header class="section__head reveal">
     <span class="mono muted">01 / Обо мне</span>
@@ -150,26 +163,29 @@
   <div class="bento bento--about">
     <article class="card about__text reveal">
       <p>
-        Пишу код с 2016 года. Начинал с вёрстки лендингов, сейчас проектирую
-        и собираю сложные веб-приложения: от архитектуры API до анимаций в интерфейсе.
+        Привет! Меня зовут <span data-config="firstName">Алексей</span>. Я Python-разработчик с фокусом на бэкенд
+        и интересом к ML/DevOps. Мой коммерческий опыт — 1 год, но за это время
+        я успел погрузиться в полный цикл создания продуктов: от проектирования
+        API до деплоя и мониторинга.
       </p>
       <p>
-        Работаю с продуктовыми командами как самостоятельная боевая единица:
-        беру задачу, разбиваю на этапы, приношу результат. Люблю чистый код,
-        продуманные интерфейсы и метрики, а не «просто чтобы работало».
+        Сейчас я работаю над <b>Sova</b> — мультиагентной ИИ-платформой для
+        инженеров и руководителей. Это амбициозный проект, где я отвечаю за
+        ML-часть и помогаю выстраивать инфраструктуру. Мы используем Python и Go,
+        чтобы обеспечить скорость и надёжность на уровне Enterprise.
       </p>
       <div class="principles">
         <div class="principle">
           <span class="principle__num" aria-hidden="true">→</span>
-          <div><b>Прозрачность.</b> Регулярные апдейты, никаких «пропал на неделю».</div>
+          <div><b>Прозрачность.</b> Держу заказчика в курсе на каждом этапе.</div>
         </div>
         <div class="principle">
           <span class="principle__num" aria-hidden="true">→</span>
-          <div><b>Понятный код.</b> Через полгода его сможет поддержать любой.</div>
+          <div><b>Понятный код.</b> Пишу так, чтобы через полгода его понял и я, и коллеги.</div>
         </div>
         <div class="principle">
           <span class="principle__num" aria-hidden="true">→</span>
-          <div><b>Скорость и качество.</b> Работаю быстро, но не в ущерб стабильности.</div>
+          <div><b>Результат.</b> Решаю бизнес-задачи, а не просто «пишу код».</div>
         </div>
       </div>
     </article>
@@ -177,209 +193,102 @@
     <article class="card about__stack reveal">
       <p class="mono muted">// стек</p>
       <div class="tags">
-        <span class="tag">TypeScript</span>
-        <span class="tag">React</span>
-        <span class="tag">Next.js</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">NestJS</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Django</span>
         <span class="tag">PostgreSQL</span>
-        <span class="tag">Prisma</span>
-        <span class="tag">Redis</span>
+        <span class="tag">SQLite</span>
         <span class="tag">Docker</span>
-        <span class="tag">AWS</span>
-        <span class="tag tag--terra">Figma</span>
-        <span class="tag tag--terra">Tailwind</span>
+        <span class="tag">Docker Compose</span>
+        <span class="tag">Git</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag tag--terra">Go (основы)</span>
+        <span class="tag tag--terra">scikit-learn</span>
+        <span class="tag tag--terra">pandas</span>
       </div>
     </article>
 
     <article class="card facts reveal">
       <p class="mono muted">// быстрые факты</p>
       <ul class="facts__list">
-        <li><b>2016</b><span>первый коммерческий проект</span></li>
-        <li><b>12</b><span>стран в командах</span></li>
-        <li><b>4</b><span>стартапа от идеи до релиза</span></li>
+        <li><b>2024</b><span>начало коммерческой разработки</span></li>
+        <li><b>Sova</b><span>участие в ИИ-платформе</span></li>
+        <li><b data-config="partnersCount">2</b><span>партнёра-инженера</span></li>
         <li><b>∞</b><span>чашек кофе</span></li>
       </ul>
     </article>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ════════════════════════════════════════════════════════
+     SKILLS — рендерится из js/data/skills.js
+     ════════════════════════════════════════════════════════ -->
 <section class="section container" id="skills">
   <header class="section__head reveal">
     <span class="mono muted">02 / Навыки</span>
     <h2>Технологии, с которыми работаю <em>ежедневно</em></h2>
   </header>
 
-  <div class="card tabs__wrap reveal" data-skills-root>
-    <div class="tabs" role="tablist" aria-label="Категории навыков">
-      <button class="tab is-active" id="tab-frontend" data-tab="frontend" role="tab" aria-selected="true"  aria-controls="panel-frontend" tabindex="0">Frontend</button>
-      <button class="tab"           id="tab-backend"  data-tab="backend"  role="tab" aria-selected="false" aria-controls="panel-backend"  tabindex="-1">Backend</button>
-      <button class="tab"           id="tab-devops"   data-tab="devops"   role="tab" aria-selected="false" aria-controls="panel-devops"   tabindex="-1">DevOps</button>
-      <button class="tab"           id="tab-tools"    data-tab="tools"    role="tab" aria-selected="false" aria-controls="panel-tools"    tabindex="-1">Tools</button>
-    </div>
-
-    <div class="tabs__panel is-active" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend" data-panel="frontend" tabindex="0">
-      <div class="skill"><span>React / Next.js</span><div class="bar"><i data-value="95"></i></div><b data-value="95">95%</b></div>
-      <div class="skill"><span>TypeScript</span><div class="bar"><i data-value="92"></i></div><b data-value="92">92%</b></div>
-      <div class="skill"><span>CSS / Tailwind</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
-      <div class="skill"><span>Анимации / Framer Motion</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
-    </div>
-
-    <div class="tabs__panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend" data-panel="backend" tabindex="0">
-      <div class="skill"><span>Node.js / NestJS</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
-      <div class="skill"><span>PostgreSQL / Prisma</span><div class="bar"><i data-value="88"></i></div><b data-value="88">88%</b></div>
-      <div class="skill"><span>REST / GraphQL</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
-      <div class="skill"><span>Redis / RabbitMQ</span><div class="bar"><i data-value="75"></i></div><b data-value="75">75%</b></div>
-    </div>
-
-    <div class="tabs__panel" id="panel-devops" role="tabpanel" aria-labelledby="tab-devops" data-panel="devops" tabindex="0">
-      <div class="skill"><span>Docker / Compose</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
-      <div class="skill"><span>CI/CD (GitHub Actions)</span><div class="bar"><i data-value="82"></i></div><b data-value="82">82%</b></div>
-      <div class="skill"><span>AWS / Vercel</span><div class="bar"><i data-value="78"></i></div><b data-value="78">78%</b></div>
-      <div class="skill"><span>Nginx / Linux</span><div class="bar"><i data-value="75"></i></div><b data-value="75">75%</b></div>
-    </div>
-
-    <div class="tabs__panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" data-panel="tools" tabindex="0">
-      <div class="skill"><span>Git / GitHub</span><div class="bar"><i data-value="95"></i></div><b data-value="95">95%</b></div>
-      <div class="skill"><span>Figma</span><div class="bar"><i data-value="80"></i></div><b data-value="80">80%</b></div>
-      <div class="skill"><span>Jest / Playwright</span><div class="bar"><i data-value="78"></i></div><b data-value="78">78%</b></div>
-      <div class="skill"><span>Linear / Notion</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
-    </div>
-  </div>
+  <!-- Содержимое вставит js/render.js -->
+  <div class="card tabs__wrap reveal" id="skillsRoot" data-skills-root></div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ════════════════════════════════════════════════════════
+     PROJECTS — рендерится из js/data/projects.js
+     ════════════════════════════════════════════════════════ -->
 <section class="section container" id="projects">
   <header class="section__head reveal">
     <span class="mono muted">03 / Проекты</span>
     <h2>Избранные <em>кейсы</em></h2>
   </header>
 
-  <div class="filters reveal" role="group" aria-label="Фильтр проектов">
-    <button class="chip is-active" data-filter="all" aria-pressed="true">Все</button>
-    <button class="chip" data-filter="web"    aria-pressed="false">Web</button>
-    <button class="chip" data-filter="saas"   aria-pressed="false">SaaS</button>
-    <button class="chip" data-filter="mobile" aria-pressed="false">Mobile</button>
-  </div>
+  <!-- Фильтры тоже рендерит JS (по уникальным категориям) -->
+  <div class="filters reveal" id="projectsFilters" role="group" aria-label="Фильтр проектов"></div>
 
-  <div class="bento bento--projects" id="projectsGrid">
-    <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#125446;--c2:#1B6B5A" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>FinFlow — финансовый дашборд</h3>
-        <p>Аналитика для B2B: графики в реальном времени, экспорт отчётов, роли и права.</p>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">Postgres</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card project reveal" data-cat="web">
-      <div class="project__cover" style="--c1:#C96F5A;--c2:#E8A79B" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>Aurora — студия дизайна</h3>
-        <p>Иммерсивный сайт с 3D-сценами, скролл-анимациями и CMS для контента.</p>
-        <div class="tags"><span class="tag">React</span><span class="tag">Three.js</span><span class="tag tag--terra">GSAP</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card project reveal" data-cat="mobile">
-      <div class="project__cover" style="--c1:#0B1817;--c2:#125446" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>Pulse — трекер привычек</h3>
-        <p>PWA с офлайн-режимом, push-уведомлениями и синхронизацией между устройствами.</p>
-        <div class="tags"><span class="tag">React</span><span class="tag">IndexedDB</span><span class="tag">Vite</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#1B6B5A;--c2:#0B1817" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>Orbit — CRM для агентств</h3>
-        <p>Учёт клиентов, сделок и задач. Мультитенантность, роли, аудит-лог.</p>
-        <div class="tags"><span class="tag">Remix</span><span class="tag">Prisma</span><span class="tag">Redis</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card project reveal" data-cat="web">
-      <div class="project__cover" style="--c1:#E8A79B;--c2:#C96F5A" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>Nova — маркетплейс цифровых товаров</h3>
-        <p>Витрина, корзина, платёжка Stripe, личный кабинет автора и админка.</p>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">Stripe</span><span class="tag tag--terra">Tailwind</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#125446;--c2:#C96F5A" aria-hidden="true"></div>
-      <div class="project__body">
-        <h3>Signal — аналитика продукта</h3>
-        <p>Воронки, retention-когорты, A/B-тесты. SDK для веба и мобильных.</p>
-        <div class="tags"><span class="tag">Node.js</span><span class="tag">ClickHouse</span><span class="tag">Kafka</span></div>
-        <div class="project__links">
-          <a href="#" class="link">Демо →</a>
-          <a href="#" class="link link--muted">GitHub</a>
-        </div>
-      </div>
-    </article>
-  </div>
+  <!-- Сетка проектов -->
+  <div class="bento bento--projects" id="projectsGrid"></div>
 </section>
 
-<!-- SERVICES -->
+<!-- ════════════════════════════════════════════════════════
+     SERVICES — правишь прямо тут
+     ════════════════════════════════════════════════════════ -->
 <section class="section container" id="services">
   <header class="section__head reveal">
-    <span class="mono muted">04 / Форматы работы</span>
-    <h2>Как мы можем <em>поработать</em></h2>
+    <span class="mono muted">04 / Сотрудничество</span>
+    <h2>Готов к <em>сотрудничеству</em></h2>
   </header>
 
   <div class="bento bento--services">
     <article class="card service reveal">
-      <span class="mono muted">под ключ</span>
-      <h3>Разработка проекта</h3>
-      <p>От идеи до запуска: архитектура, код, деплой. Оплата по этапам.</p>
-      <div class="service__meta"><b>от 4 недель</b> · от 250 000 ₽</div>
+      <span class="mono muted">разработка</span>
+      <h3>Backend-разработка</h3>
+      <p>API, базы данных, интеграции, автоматизация бизнес-процессов.</p>
+      <div class="service__meta"><b>обсуждается</b> · по проекту</div>
     </article>
     <article class="card service reveal">
-      <span class="mono muted">точечно</span>
-      <h3>Аудит и консультация</h3>
-      <p>Разберу код, найду узкие места, дам план улучшений.</p>
-      <div class="service__meta"><b>3–5 дней</b> · от 30 000 ₽</div>
+      <span class="mono muted">инфраструктура</span>
+      <h3>DevOps-задачи</h3>
+      <p>Настройка CI/CD, Docker, базовый мониторинг, деплой.</p>
+      <div class="service__meta"><b>от 3 дней</b> · по задаче</div>
     </article>
     <article class="card service reveal">
-      <span class="mono muted">на связи</span>
+      <span class="mono muted">данные</span>
+      <h3>ML-консультации</h3>
+      <p>Помощь с пайплайнами данных, обучение моделей, разбор кейсов.</p>
+      <div class="service__meta"><b>по сессиям</b> · от 1 часа</div>
+    </article>
+    <article class="card service reveal">
+      <span class="mono muted">поддержка</span>
       <h3>Техподдержка</h3>
-      <p>Регулярные доработки, фиксы, мониторинг. По абонентской плате.</p>
-      <div class="service__meta"><b>ежемесячно</b> · от 60 000 ₽</div>
-    </article>
-    <article class="card service reveal">
-      <span class="mono muted">разово</span>
-      <h3>Менторство</h3>
-      <p>Разбор кода, код-ревью, помощь с архитектурой и карьерой в IT.</p>
-      <div class="service__meta"><b>по сессиям</b> · от 8 000 ₽/час</div>
+      <p>Доработки, фиксы, обновления и мониторинг существующих проектов.</p>
+      <div class="service__meta"><b>ежемесячно</b> · по договорённости</div>
     </article>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ════════════════════════════════════════════════════════
+     CONTACT — email/telegram/github/formspree из config.js
+     ════════════════════════════════════════════════════════ -->
 <section class="section container" id="contact">
   <header class="section__head reveal">
     <span class="mono muted">05 / Контакты</span>
@@ -388,15 +297,14 @@
 
   <div class="bento bento--contact">
     <article class="card contact__form reveal">
-      <!-- ВАЖНО: замените ВАШ_ID на реальный ID формы Formspree -->
-      <form id="contactForm" action="https://formspree.io/f/ВАШ_ID" method="POST">
+      <form id="contactForm" action="" method="POST" novalidate>
         <label>
           <span>Имя</span>
           <input type="text" name="name" placeholder="Как вас зовут?" autocomplete="name" required />
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          <input type="email" name="email" placeholder="you@example.com" autocomplete="email" inputmode="email" required />
         </label>
         <label>
           <span>О проекте</span>
@@ -412,22 +320,26 @@
         <span class="dot" aria-hidden="true"></span>
         <span>Свободен для новых проектов</span>
       </div>
-      <p class="muted">Ближайший старт — <b class="accent">1 октября 2026</b></p>
+      <p class="muted">Ближайший старт — <b class="accent">готов обсуждать</b></p>
       <p class="muted">Средний отклик — <b class="accent">до 24 часов</b></p>
     </article>
 
     <article class="card contact__links reveal">
       <p class="mono muted">// прямые контакты</p>
-      <a class="contact__link" href="mailto:hi@ivan.dev">
-        <span>Email</span><b>hi@ivan.dev</b>
+
+      <a class="contact__link" data-config-href="emailLink">
+        <span>Email</span><b data-config="email">lugachev70@gmail.com</b>
       </a>
-      <a class="contact__link" href="https://t.me/" target="_blank" rel="noopener">
-        <span>Telegram</span><b>@ivan_dev</b>
+
+      <a class="contact__link" data-config-href="telegramLink" target="_blank" rel="noopener noreferrer">
+        <span>Telegram</span><b data-config="telegram">@alakei4</b>
       </a>
-      <a class="contact__link" href="https://github.com/" target="_blank" rel="noopener">
-        <span>GitHub</span><b>github.com/ivan</b>
+
+      <a class="contact__link" data-config-href="githubLink" target="_blank" rel="noopener noreferrer">
+        <span>GitHub</span><b data-config="github">github.com/alakei1</b>
       </a>
-      <button type="button" class="btn btn--ghost btn--full copy-btn" data-copy="hi@ivan.dev">
+
+      <button type="button" class="btn btn--ghost btn--full copy-btn" data-config-copy="email">
         Скопировать email
       </button>
     </article>
@@ -439,13 +351,13 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer__inner">
-    <p class="muted">© <span id="year"></span> Иван. Все права защищены.</p>
-    <p class="mono muted">made with ♥ and TypeScript</p>
+    <p class="muted">© <span id="year"></span> <span data-config="fullName">Алексей Лугачев</span>. Все права защищены.</p>
+    <p class="mono muted">made with ♥ and Python</p>
   </div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="script.js" defer></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
