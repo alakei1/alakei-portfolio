@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.className += ' js';</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Иван — Full-Stack разработчик</title>
+<meta name="description" content="Собираю быстрые и надёжные продукты на React, Node.js и TypeScript. 7+ лет опыта." />
+<meta name="theme-color" content="#112221" />
+
+<meta property="og:title" content="Иван — Full-Stack разработчик" />
+<meta property="og:description" content="React · Node.js · TypeScript" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="#" class="nav__logo">ivan<span>.dev</span></a>
+    <ul class="nav__links">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#skills">Навыки</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--accent">Обсудить проект</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="section container hero">
+  <div class="bento">
+    <article class="card hero__main reveal">
+      <span class="badge">
+        <span class="dot"></span> Открыт к проектам
+      </span>
+      <h1>Full-Stack разработчик для&nbsp;<em>цифровых продуктов</em></h1>
+      <p class="lead">
+        Собираю быстрые, надёжные и красивые веб-приложения
+        на React, Node.js и TypeScript. 7+ лет в продакшене.
+      </p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--accent">Обсудить проект</a>
+        <a href="#projects" class="btn btn--ghost">Смотреть кейсы →</a>
+      </div>
+    </article>
+
+    <article class="card hero__side reveal">
+      <div class="avatar">
+        <div class="avatar__ring"></div>
+        <div class="avatar__initials">ИВ</div>
+      </div>
+      <p class="mono muted">// Москва · GMT+3</p>
+      <p class="hero__status">Свободен с <span class="accent">1&nbsp;октября</span></p>
+    </article>
+
+    <article class="card terminal reveal">
+      <div class="terminal__bar">
+        <span></span><span></span><span></span>
+        <em>~/now.sh</em>
+      </div>
+      <pre class="terminal__body"><code><span class="t-cmd">$</span> whoami
+<span class="t-out">full-stack · remote · GMT+3</span>
+<span class="t-cmd">$</span> cat focus.txt
+<span class="t-out">TypeScript · React · Node.js</span>
+<span class="t-cmd">$</span> status
+<span class="t-ok">● available for new projects</span></code></pre>
+    </article>
+
+    <article class="card stat reveal">
+      <div class="stat__num">7+</div>
+      <div class="stat__label">лет опыта</div>
+    </article>
+    <article class="card stat reveal">
+      <div class="stat__num">42</div>
+      <div class="stat__label">проекта в продакшене</div>
+    </article>
+    <article class="card stat reveal">
+      <div class="stat__num">98<span>%</span></div>
+      <div class="stat__label">клиентов возвращаются</div>
+    </article>
+    <article class="card stat reveal">
+      <div class="stat__num">5<span>★</span></div>
+      <div class="stat__label">средняя оценка</div>
+    </article>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section container" id="about">
+  <header class="section__head reveal">
+    <span class="mono muted">01 / Обо мне</span>
+    <h2>Продуктовый подход, <em>инженерная точность</em></h2>
+  </header>
+
+  <div class="bento bento--about">
+    <article class="card about__text reveal">
+      <p>
+        Пишу код с 2016 года. Начинал с вёрстки лендингов, сейчас проектирую
+        и собираю сложные веб-приложения: от архитектуры API до анимаций в интерфейсе.
+      </p>
+      <p>
+        Работаю с продуктовыми командами как самостоятельная боевая единица:
+        беру задачу, разбиваю на этапы, приношу результат. Люблю чистый код,
+        продуманные интерфейсы и метрики, а не «просто чтобы работало».
+      </p>
+      <div class="principles">
+        <div class="principle">
+          <span class="principle__num">→</span>
+          <div><b>Прозрачность.</b> Регулярные апдейты, никаких «пропал на неделю».</div>
+        </div>
+        <div class="principle">
+          <span class="principle__num">→</span>
+          <div><b>Понятный код.</b> Через полгода его сможет поддержать любой.</div>
+        </div>
+        <div class="principle">
+          <span class="principle__num">→</span>
+          <div><b>Скорость и качество.</b> Работаю быстро, но не в ущерб стабильности.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card about__stack reveal">
+      <p class="mono muted">// стек</p>
+      <div class="tags">
+        <span class="tag">TypeScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">NestJS</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Prisma</span>
+        <span class="tag">Redis</span>
+        <span class="tag">Docker</span>
+        <span class="tag">AWS</span>
+        <span class="tag tag--terra">Figma</span>
+        <span class="tag tag--terra">Tailwind</span>
+      </div>
+    </article>
+
+    <article class="card facts reveal">
+      <p class="mono muted">// быстрые факты</p>
+      <ul class="facts__list">
+        <li><b>2016</b><span>первый коммерческий проект</span></li>
+        <li><b>12</b><span>стран в командах</span></li>
+        <li><b>4</b><span>стартапа от идеи до релиза</span></li>
+        <li><b>∞</b><span>чашек кофе</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section container" id="skills">
+  <header class="section__head reveal">
+    <span class="mono muted">02 / Навыки</span>
+    <h2>Технологии, с которыми работаю <em>ежедневно</em></h2>
+  </header>
+
+  <div class="card tabs__wrap reveal">
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="frontend" role="tab">Frontend</button>
+      <button class="tab" data-tab="backend" role="tab">Backend</button>
+      <button class="tab" data-tab="devops" role="tab">DevOps</button>
+      <button class="tab" data-tab="tools" role="tab">Tools</button>
+    </div>
+
+    <div class="tabs__panel is-active" data-panel="frontend">
+      <div class="skill"><span>React / Next.js</span><div class="bar"><i style="--v:95%"></i></div><b>95%</b></div>
+      <div class="skill"><span>TypeScript</span><div class="bar"><i style="--v:92%"></i></div><b>92%</b></div>
+      <div class="skill"><span>CSS / Tailwind</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
+      <div class="skill"><span>Анимации / Framer Motion</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
+    </div>
+
+    <div class="tabs__panel" data-panel="backend">
+      <div class="skill"><span>Node.js / NestJS</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
+      <div class="skill"><span>PostgreSQL / Prisma</span><div class="bar"><i style="--v:88%"></i></div><b>88%</b></div>
+      <div class="skill"><span>REST / GraphQL</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
+      <div class="skill"><span>Redis / RabbitMQ</span><div class="bar"><i style="--v:75%"></i></div><b>75%</b></div>
+    </div>
+
+    <div class="tabs__panel" data-panel="devops">
+      <div class="skill"><span>Docker / Compose</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
+      <div class="skill"><span>CI/CD (GitHub Actions)</span><div class="bar"><i style="--v:82%"></i></div><b>82%</b></div>
+      <div class="skill"><span>AWS / Vercel</span><div class="bar"><i style="--v:78%"></i></div><b>78%</b></div>
+      <div class="skill"><span>Nginx / Linux</span><div class="bar"><i style="--v:75%"></i></div><b>75%</b></div>
+    </div>
+
+    <div class="tabs__panel" data-panel="tools">
+      <div class="skill"><span>Git / GitHub</span><div class="bar"><i style="--v:95%"></i></div><b>95%</b></div>
+      <div class="skill"><span>Figma</span><div class="bar"><i style="--v:80%"></i></div><b>80%</b></div>
+      <div class="skill"><span>Jest / Playwright</span><div class="bar"><i style="--v:78%"></i></div><b>78%</b></div>
+      <div class="skill"><span>Linear / Notion</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section container" id="projects">
+  <header class="section__head reveal">
+    <span class="mono muted">03 / Проекты</span>
+    <h2>Избранные <em>кейсы</em></h2>
+  </header>
+
+  <div class="filters reveal">
+    <button class="chip is-active" data-filter="all">Все</button>
+    <button class="chip" data-filter="web">Web</button>
+    <button class="chip" data-filter="saas">SaaS</button>
+    <button class="chip" data-filter="mobile">Mobile</button>
+  </div>
+
+  <div class="bento bento--projects" id="projectsGrid">
+    <article class="card project reveal" data-cat="saas">
+      <div class="project__cover" style="--c1:#125446;--c2:#1B6B5A"></div>
+      <div class="project__body">
+        <h3>FinFlow — финансовый дашборд</h3>
+        <p>Аналитика для B2B: графики в реальном времени, экспорт отчётов, роли и права.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">Postgres</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project reveal" data-cat="web">
+      <div class="project__cover" style="--c1:#C96F5A;--c2:#E8A79B"></div>
+      <div class="project__body">
+        <h3>Aurora — студия дизайна</h3>
+        <p>Иммерсивный сайт с 3D-сценами, скролл-анимациями и CMS для контента.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Three.js</span><span class="tag tag--terra">GSAP</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project reveal" data-cat="mobile">
+      <div class="project__cover" style="--c1:#0B1817;--c2:#125446"></div>
+      <div class="project__body">
+        <h3>Pulse — трекер привычек</h3>
+        <p>PWA с офлайн-режимом, push-уведомлениями и синхронизацией между устройствами.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">IndexedDB</span><span class="tag">Vite</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project reveal" data-cat="saas">
+      <div class="project__cover" style="--c1:#1B6B5A;--c2:#0B1817"></div>
+      <div class="project__body">
+        <h3>Orbit — CRM для агентств</h3>
+        <p>Учёт клиентов, сделок и задач. Мультитенантность, роли, аудит-лог.</p>
+        <div class="tags"><span class="tag">Remix</span><span class="tag">Prisma</span><span class="tag">Redis</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project reveal" data-cat="web">
+      <div class="project__cover" style="--c1:#E8A79B;--c2:#C96F5A"></div>
+      <div class="project__body">
+        <h3>Nova — маркетплейс цифровых товаров</h3>
+        <p>Витрина, корзина, платёжка Stripe, личный кабинет автора и админка.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Stripe</span><span class="tag tag--terra">Tailwind</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project reveal" data-cat="saas">
+      <div class="project__cover" style="--c1:#125446;--c2:#C96F5A"></div>
+      <div class="project__body">
+        <h3>Signal — аналитика продукта</h3>
+        <p>Воронки, retention-когорты, A/B-тесты. SDK для веба и мобильных.</p>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">ClickHouse</span><span class="tag">Kafka</span></div>
+        <div class="project__links">
+          <a href="#" class="link">Демо →</a>
+          <a href="#" class="link link--muted">GitHub</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section container" id="services">
+  <header class="section__head reveal">
+    <span class="mono muted">04 / Форматы работы</span>
+    <h2>Как мы можем <em>поработать</em></h2>
+  </header>
+
+  <div class="bento bento--services">
+    <article class="card service reveal">
+      <span class="mono muted">под ключ</span>
+      <h3>Разработка проекта</h3>
+      <p>От идеи до запуска: архитектура, код, деплой. Оплата по этапам.</p>
+      <div class="service__meta"><b>от 4 недель</b> · от 250 000 ₽</div>
+    </article>
+    <article class="card service reveal">
+      <span class="mono muted">точечно</span>
+      <h3>Аудит и консультация</h3>
+      <p>Разберу код, найду узкие места, дам план улучшений.</p>
+      <div class="service__meta"><b>3–5 дней</b> · от 30 000 ₽</div>
+    </article>
+    <article class="card service reveal">
+      <span class="mono muted">на связи</span>
+      <h3>Техподдержка</h3>
+      <p>Регулярные доработки, фиксы, мониторинг. По абонентской плате.</p>
+      <div class="service__meta"><b>ежемесячно</b> · от 60 000 ₽</div>
+    </article>
+    <article class="card service reveal">
+      <span class="mono muted">разово</span>
+      <h3>Менторство</h3>
+      <p>Разбор кода, код-ревью, помощь с архитектурой и карьерой в IT.</p>
+      <div class="service__meta"><b>по сессиям</b> · от 8 000 ₽/час</div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section container" id="contact">
+  <header class="section__head reveal">
+    <span class="mono muted">05 / Контакты</span>
+    <h2>Обсудим <em>ваш проект</em>?</h2>
+  </header>
+
+  <div class="bento bento--contact">
+    <article class="card contact__form reveal">
+      <form id="contactForm" action="https://formspree.io/f/ВАШ_ID" method="POST">
+        <label>
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Как вас зовут?" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>О проекте</span>
+          <textarea name="message" rows="4" placeholder="Пара слов о задаче, сроках и бюджете" required></textarea>
+        </label>
+        <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+        <p class="form__note">Отвечу в течение 24 часов.</p>
+      </form>
+    </article>
+
+    <article class="card availability reveal">
+      <div class="availability__row">
+        <span class="dot"></span>
+        <span>Свободен для новых проектов</span>
+      </div>
+      <p class="muted">Ближайший старт — <b class="accent">1 октября 2026</b></p>
+      <p class="muted">Средний отклик — <b class="accent">до 24 часов</b></p>
+    </article>
+
+    <article class="card contact__links reveal">
+      <p class="mono muted">// прямые контакты</p>
+      <a class="contact__link" href="mailto:hi@ivan.dev">
+        <span>Email</span><b>hi@ivan.dev</b>
+      </a>
+      <a class="contact__link" href="https://t.me/" target="_blank" rel="noopener">
+        <span>Telegram</span><b>@ivan_dev</b>
+      </a>
+      <a class="contact__link" href="https://github.com/" target="_blank" rel="noopener">
+        <span>GitHub</span><b>github.com/ivan</b>
+      </a>
+      <button class="btn btn--ghost btn--full copy-btn" data-copy="hi@ivan.dev">
+        Скопировать email
+      </button>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="muted">© <span id="year"></span> Иван. Все права защищены.</p>
+    <p class="mono muted">made with ♥ and TypeScript</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Скопировано</div>
+
+<script src="script.js"></script>
+<script>
+  // Страховка: если по какой-то причине script.js не загрузился и карточки
+  // остались скрытыми (.reveal без .is-visible) — принудительно показываем.
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+    }, 1500);
+  });
+</script>
+</body>
+</html>
