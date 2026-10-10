@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
-<script>document.documentElement.className += ' js';</script>
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Иван — Full-Stack разработчик</title>
 <meta name="description" content="Собираю быстрые и надёжные продукты на React, Node.js и TypeScript. 7+ лет опыта." />
@@ -14,13 +14,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" aria-label="Основная навигация">
   <div class="container nav__inner">
     <a href="#" class="nav__logo">ivan<span>.dev</span></a>
     <ul class="nav__links">
@@ -38,60 +38,105 @@
 
 <!-- HERO -->
 <section class="section container hero">
-  <div class="bento">
-    <article class="card hero__main reveal">
-      <span class="badge">
-        <span class="dot"></span> Открыт к проектам
-      </span>
-      <h1>Full-Stack разработчик для&nbsp;<em>цифровых продуктов</em></h1>
-      <p class="lead">
-        Собираю быстрые, надёжные и красивые веб-приложения
-        на React, Node.js и TypeScript. 7+ лет в продакшене.
-      </p>
+  <div class="bento bento--hero">
+
+    <article class="card hero__funding reveal">
+      <p class="card__kicker">Опыт в разработке</p>
+      <div class="progress-ring" style="--p:75" data-ring="75">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="progress-ring__bg" cx="60" cy="60" r="48"/>
+          <circle class="progress-ring__fg" cx="60" cy="60" r="48"/>
+        </svg>
+        <div class="progress-ring__label">
+          <b data-counter="75" data-suffix="%">75%</b>
+          <span>задач в срок</span>
+        </div>
+      </div>
+      <div class="hero__big-num" data-counter="7" data-suffix="+">7+</div>
+      <p class="card__sub">лет коммерческой разработки на React и Node.js</p>
+    </article>
+
+    <article class="card hero__views reveal">
+      <div class="hero__stat-num" data-counter="4875" data-format="thousand-dot">4.875</div>
+      <p class="card__sub">просмотров портфолио за год</p>
+    </article>
+
+    <article class="card hero__users reveal">
+      <p class="card__kicker">Новые клиенты</p>
+      <div class="hero__stat-num" data-counter="57" data-suffix="K">57K</div>
+      <div class="hero__stat-delta">+10%</div>
+    </article>
+
+    <article class="card hero__team reveal">
+      <p class="card__kicker">Команда и партнёры</p>
+
+      <div class="hero__photo">
+        <img
+          src="photo.png"
+          alt="Иван — Full-Stack разработчик"
+          width="96" height="96"
+          loading="lazy" decoding="async"
+          onerror="this.remove(); this.closest('.hero__photo').classList.add('hero__photo--fallback');"
+        />
+      </div>
+
+      <h3 class="hero__team-title">Дизайнеры и разработчики, с которыми работаю</h3>
+      <div class="avatars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span class="avatars__more">+2</span>
+      </div>
+      <div class="hero__team-bottom">
+        <p class="card__kicker">Заявок в месяц</p>
+        <div class="hero__stat-num" data-counter="54">54</div>
+        <div class="hero__stat-delta">+40%</div>
+      </div>
+    </article>
+
+    <article class="card hero__center reveal">
+      <span class="badge"><span class="dot" aria-hidden="true"></span> Открыт к проектам</span>
+      <h1>Full-Stack разработчик <em>цифровых продуктов</em></h1>
+      <p class="lead">Собираю быстрые, надёжные веб-приложения на React, Node.js и TypeScript.</p>
       <div class="hero__cta">
         <a href="#contact" class="btn btn--accent">Обсудить проект</a>
         <a href="#projects" class="btn btn--ghost">Смотреть кейсы →</a>
       </div>
     </article>
 
-    <article class="card hero__side reveal">
-      <div class="avatar">
-        <div class="avatar__ring"></div>
-        <div class="avatar__initials">ИВ</div>
-      </div>
-      <p class="mono muted">// Москва · GMT+3</p>
-      <p class="hero__status">Свободен с <span class="accent">1&nbsp;октября</span></p>
-    </article>
-
     <article class="card terminal reveal">
-      <div class="terminal__bar">
+      <div class="terminal__bar" aria-hidden="true">
         <span></span><span></span><span></span>
         <em>~/now.sh</em>
       </div>
       <pre class="terminal__body"><code><span class="t-cmd">$</span> whoami
-<span class="t-out">full-stack · remote · GMT+3</span>
-<span class="t-cmd">$</span> cat focus.txt
-<span class="t-out">TypeScript · React · Node.js</span>
+<span class="t-out">full-stack · GMT+3</span>
 <span class="t-cmd">$</span> status
-<span class="t-ok">● available for new projects</span></code></pre>
+<span class="t-ok">● available</span></code></pre>
     </article>
 
-    <article class="card stat reveal">
-      <div class="stat__num">7+</div>
-      <div class="stat__label">лет опыта</div>
+    <article class="card hero__mini reveal">
+      <p class="card__kicker">Локация</p>
+      <div class="hero__big-num hero__big-num--sm">Мск</div>
+      <p class="card__sub">GMT+3 · удалённо</p>
     </article>
-    <article class="card stat reveal">
-      <div class="stat__num">42</div>
-      <div class="stat__label">проекта в продакшене</div>
+
+    <article class="card hero__stack reveal">
+      <p class="card__kicker">Стек</p>
+      <div class="tags tags--small">
+        <span class="tag">TS</span>
+        <span class="tag">React</span>
+        <span class="tag">Next</span>
+        <span class="tag">Node</span>
+        <span class="tag">PG</span>
+        <span class="tag tag--terra">Docker</span>
+      </div>
     </article>
-    <article class="card stat reveal">
-      <div class="stat__num">98<span>%</span></div>
-      <div class="stat__label">клиентов возвращаются</div>
+
+    <article class="card hero__cta-card reveal">
+      <p class="card__kicker">Свободен</p>
+      <h3 class="hero__cta-title">Готов обсудить ваш проект</h3>
+      <a href="#contact" class="btn btn--accent btn--full">Написать</a>
     </article>
-    <article class="card stat reveal">
-      <div class="stat__num">5<span>★</span></div>
-      <div class="stat__label">средняя оценка</div>
-    </article>
+
   </div>
 </section>
 
@@ -115,15 +160,15 @@
       </p>
       <div class="principles">
         <div class="principle">
-          <span class="principle__num">→</span>
+          <span class="principle__num" aria-hidden="true">→</span>
           <div><b>Прозрачность.</b> Регулярные апдейты, никаких «пропал на неделю».</div>
         </div>
         <div class="principle">
-          <span class="principle__num">→</span>
+          <span class="principle__num" aria-hidden="true">→</span>
           <div><b>Понятный код.</b> Через полгода его сможет поддержать любой.</div>
         </div>
         <div class="principle">
-          <span class="principle__num">→</span>
+          <span class="principle__num" aria-hidden="true">→</span>
           <div><b>Скорость и качество.</b> Работаю быстро, но не в ущерб стабильности.</div>
         </div>
       </div>
@@ -166,40 +211,40 @@
     <h2>Технологии, с которыми работаю <em>ежедневно</em></h2>
   </header>
 
-  <div class="card tabs__wrap reveal">
-    <div class="tabs" role="tablist">
-      <button class="tab is-active" data-tab="frontend" role="tab">Frontend</button>
-      <button class="tab" data-tab="backend" role="tab">Backend</button>
-      <button class="tab" data-tab="devops" role="tab">DevOps</button>
-      <button class="tab" data-tab="tools" role="tab">Tools</button>
+  <div class="card tabs__wrap reveal" data-skills-root>
+    <div class="tabs" role="tablist" aria-label="Категории навыков">
+      <button class="tab is-active" id="tab-frontend" data-tab="frontend" role="tab" aria-selected="true"  aria-controls="panel-frontend" tabindex="0">Frontend</button>
+      <button class="tab"           id="tab-backend"  data-tab="backend"  role="tab" aria-selected="false" aria-controls="panel-backend"  tabindex="-1">Backend</button>
+      <button class="tab"           id="tab-devops"   data-tab="devops"   role="tab" aria-selected="false" aria-controls="panel-devops"   tabindex="-1">DevOps</button>
+      <button class="tab"           id="tab-tools"    data-tab="tools"    role="tab" aria-selected="false" aria-controls="panel-tools"    tabindex="-1">Tools</button>
     </div>
 
-    <div class="tabs__panel is-active" data-panel="frontend">
-      <div class="skill"><span>React / Next.js</span><div class="bar"><i style="--v:95%"></i></div><b>95%</b></div>
-      <div class="skill"><span>TypeScript</span><div class="bar"><i style="--v:92%"></i></div><b>92%</b></div>
-      <div class="skill"><span>CSS / Tailwind</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
-      <div class="skill"><span>Анимации / Framer Motion</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
+    <div class="tabs__panel is-active" id="panel-frontend" role="tabpanel" aria-labelledby="tab-frontend" data-panel="frontend" tabindex="0">
+      <div class="skill"><span>React / Next.js</span><div class="bar"><i data-value="95"></i></div><b data-value="95">95%</b></div>
+      <div class="skill"><span>TypeScript</span><div class="bar"><i data-value="92"></i></div><b data-value="92">92%</b></div>
+      <div class="skill"><span>CSS / Tailwind</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
+      <div class="skill"><span>Анимации / Framer Motion</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
     </div>
 
-    <div class="tabs__panel" data-panel="backend">
-      <div class="skill"><span>Node.js / NestJS</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
-      <div class="skill"><span>PostgreSQL / Prisma</span><div class="bar"><i style="--v:88%"></i></div><b>88%</b></div>
-      <div class="skill"><span>REST / GraphQL</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
-      <div class="skill"><span>Redis / RabbitMQ</span><div class="bar"><i style="--v:75%"></i></div><b>75%</b></div>
+    <div class="tabs__panel" id="panel-backend" role="tabpanel" aria-labelledby="tab-backend" data-panel="backend" tabindex="0">
+      <div class="skill"><span>Node.js / NestJS</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
+      <div class="skill"><span>PostgreSQL / Prisma</span><div class="bar"><i data-value="88"></i></div><b data-value="88">88%</b></div>
+      <div class="skill"><span>REST / GraphQL</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
+      <div class="skill"><span>Redis / RabbitMQ</span><div class="bar"><i data-value="75"></i></div><b data-value="75">75%</b></div>
     </div>
 
-    <div class="tabs__panel" data-panel="devops">
-      <div class="skill"><span>Docker / Compose</span><div class="bar"><i style="--v:85%"></i></div><b>85%</b></div>
-      <div class="skill"><span>CI/CD (GitHub Actions)</span><div class="bar"><i style="--v:82%"></i></div><b>82%</b></div>
-      <div class="skill"><span>AWS / Vercel</span><div class="bar"><i style="--v:78%"></i></div><b>78%</b></div>
-      <div class="skill"><span>Nginx / Linux</span><div class="bar"><i style="--v:75%"></i></div><b>75%</b></div>
+    <div class="tabs__panel" id="panel-devops" role="tabpanel" aria-labelledby="tab-devops" data-panel="devops" tabindex="0">
+      <div class="skill"><span>Docker / Compose</span><div class="bar"><i data-value="85"></i></div><b data-value="85">85%</b></div>
+      <div class="skill"><span>CI/CD (GitHub Actions)</span><div class="bar"><i data-value="82"></i></div><b data-value="82">82%</b></div>
+      <div class="skill"><span>AWS / Vercel</span><div class="bar"><i data-value="78"></i></div><b data-value="78">78%</b></div>
+      <div class="skill"><span>Nginx / Linux</span><div class="bar"><i data-value="75"></i></div><b data-value="75">75%</b></div>
     </div>
 
-    <div class="tabs__panel" data-panel="tools">
-      <div class="skill"><span>Git / GitHub</span><div class="bar"><i style="--v:95%"></i></div><b>95%</b></div>
-      <div class="skill"><span>Figma</span><div class="bar"><i style="--v:80%"></i></div><b>80%</b></div>
-      <div class="skill"><span>Jest / Playwright</span><div class="bar"><i style="--v:78%"></i></div><b>78%</b></div>
-      <div class="skill"><span>Linear / Notion</span><div class="bar"><i style="--v:90%"></i></div><b>90%</b></div>
+    <div class="tabs__panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" data-panel="tools" tabindex="0">
+      <div class="skill"><span>Git / GitHub</span><div class="bar"><i data-value="95"></i></div><b data-value="95">95%</b></div>
+      <div class="skill"><span>Figma</span><div class="bar"><i data-value="80"></i></div><b data-value="80">80%</b></div>
+      <div class="skill"><span>Jest / Playwright</span><div class="bar"><i data-value="78"></i></div><b data-value="78">78%</b></div>
+      <div class="skill"><span>Linear / Notion</span><div class="bar"><i data-value="90"></i></div><b data-value="90">90%</b></div>
     </div>
   </div>
 </section>
@@ -211,16 +256,16 @@
     <h2>Избранные <em>кейсы</em></h2>
   </header>
 
-  <div class="filters reveal">
-    <button class="chip is-active" data-filter="all">Все</button>
-    <button class="chip" data-filter="web">Web</button>
-    <button class="chip" data-filter="saas">SaaS</button>
-    <button class="chip" data-filter="mobile">Mobile</button>
+  <div class="filters reveal" role="group" aria-label="Фильтр проектов">
+    <button class="chip is-active" data-filter="all" aria-pressed="true">Все</button>
+    <button class="chip" data-filter="web"    aria-pressed="false">Web</button>
+    <button class="chip" data-filter="saas"   aria-pressed="false">SaaS</button>
+    <button class="chip" data-filter="mobile" aria-pressed="false">Mobile</button>
   </div>
 
   <div class="bento bento--projects" id="projectsGrid">
     <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#125446;--c2:#1B6B5A"></div>
+      <div class="project__cover" style="--c1:#125446;--c2:#1B6B5A" aria-hidden="true"></div>
       <div class="project__body">
         <h3>FinFlow — финансовый дашборд</h3>
         <p>Аналитика для B2B: графики в реальном времени, экспорт отчётов, роли и права.</p>
@@ -233,7 +278,7 @@
     </article>
 
     <article class="card project reveal" data-cat="web">
-      <div class="project__cover" style="--c1:#C96F5A;--c2:#E8A79B"></div>
+      <div class="project__cover" style="--c1:#C96F5A;--c2:#E8A79B" aria-hidden="true"></div>
       <div class="project__body">
         <h3>Aurora — студия дизайна</h3>
         <p>Иммерсивный сайт с 3D-сценами, скролл-анимациями и CMS для контента.</p>
@@ -246,7 +291,7 @@
     </article>
 
     <article class="card project reveal" data-cat="mobile">
-      <div class="project__cover" style="--c1:#0B1817;--c2:#125446"></div>
+      <div class="project__cover" style="--c1:#0B1817;--c2:#125446" aria-hidden="true"></div>
       <div class="project__body">
         <h3>Pulse — трекер привычек</h3>
         <p>PWA с офлайн-режимом, push-уведомлениями и синхронизацией между устройствами.</p>
@@ -259,7 +304,7 @@
     </article>
 
     <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#1B6B5A;--c2:#0B1817"></div>
+      <div class="project__cover" style="--c1:#1B6B5A;--c2:#0B1817" aria-hidden="true"></div>
       <div class="project__body">
         <h3>Orbit — CRM для агентств</h3>
         <p>Учёт клиентов, сделок и задач. Мультитенантность, роли, аудит-лог.</p>
@@ -272,7 +317,7 @@
     </article>
 
     <article class="card project reveal" data-cat="web">
-      <div class="project__cover" style="--c1:#E8A79B;--c2:#C96F5A"></div>
+      <div class="project__cover" style="--c1:#E8A79B;--c2:#C96F5A" aria-hidden="true"></div>
       <div class="project__body">
         <h3>Nova — маркетплейс цифровых товаров</h3>
         <p>Витрина, корзина, платёжка Stripe, личный кабинет автора и админка.</p>
@@ -285,7 +330,7 @@
     </article>
 
     <article class="card project reveal" data-cat="saas">
-      <div class="project__cover" style="--c1:#125446;--c2:#C96F5A"></div>
+      <div class="project__cover" style="--c1:#125446;--c2:#C96F5A" aria-hidden="true"></div>
       <div class="project__body">
         <h3>Signal — аналитика продукта</h3>
         <p>Воронки, retention-когорты, A/B-тесты. SDK для веба и мобильных.</p>
@@ -343,14 +388,15 @@
 
   <div class="bento bento--contact">
     <article class="card contact__form reveal">
+      <!-- ВАЖНО: замените ВАШ_ID на реальный ID формы Formspree -->
       <form id="contactForm" action="https://formspree.io/f/ВАШ_ID" method="POST">
         <label>
           <span>Имя</span>
-          <input type="text" name="name" placeholder="Как вас зовут?" required />
+          <input type="text" name="name" placeholder="Как вас зовут?" autocomplete="name" required />
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" placeholder="you@example.com" required />
+          <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
         </label>
         <label>
           <span>О проекте</span>
@@ -363,7 +409,7 @@
 
     <article class="card availability reveal">
       <div class="availability__row">
-        <span class="dot"></span>
+        <span class="dot" aria-hidden="true"></span>
         <span>Свободен для новых проектов</span>
       </div>
       <p class="muted">Ближайший старт — <b class="accent">1 октября 2026</b></p>
@@ -381,7 +427,7 @@
       <a class="contact__link" href="https://github.com/" target="_blank" rel="noopener">
         <span>GitHub</span><b>github.com/ivan</b>
       </a>
-      <button class="btn btn--ghost btn--full copy-btn" data-copy="hi@ivan.dev">
+      <button type="button" class="btn btn--ghost btn--full copy-btn" data-copy="hi@ivan.dev">
         Скопировать email
       </button>
     </article>
@@ -398,19 +444,8 @@
   </div>
 </footer>
 
-<div class="toast" id="toast">Скопировано</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="script.js"></script>
-<script>
-  // Страховка: если по какой-то причине script.js не загрузился и карточки
-  // остались скрытыми (.reveal без .is-visible) — принудительно показываем.
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) {
-        el.classList.add('is-visible');
-      });
-    }, 1500);
-  });
-</script>
+<script src="script.js" defer></script>
 </body>
 </html>
